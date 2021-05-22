@@ -40,6 +40,6 @@ gem 'dotenv-rails'
 gem 'jwt'
 gem 'cancancan'
 gem 'active_model_serializers'
-gem 'database_cleaner'
+gem 'database_cleaner' #DatabaseCleaner.clean_with(:truncation)
 gem 'active_storage_validations'
 gem 'paranoia'
