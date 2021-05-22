@@ -9,7 +9,7 @@ module HandlerExceptions extend ActiveSupport::Concern
       render json: {message: "Access denied! Token expired"}, status: :unauthorized
     end
     rescue_from ActiveRecord::RecordNotFound do |_error|
-      render json: {message: "Id post not found"}
+      render json: {message: "Id not found"}
     end
   end
 end

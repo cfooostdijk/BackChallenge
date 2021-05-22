@@ -1,10 +1,10 @@
 class PostsController < ApplicationController
+  load_and_authorize_resource class: "User"
   before_action :set_post, only: [:show, :update, :destroy]
 
   # GET /posts
   def index
-    @posts = Post.all.order('date')
-
+    @posts = Post.all
     render json: @posts
   end
 

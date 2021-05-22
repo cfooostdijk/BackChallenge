@@ -10,4 +10,5 @@ class Post < ApplicationRecord
   acts_as_paranoid
   # Use -> Post.only_deleted ; Post.with_deleted ; Post.restore(id)
 
+  default_scope {order(date: :desc)}
 end
